@@ -139,7 +139,7 @@ Status my_string_push_back(MY_STRING hMy_string, char item)
  My_string* pMy_string = (My_string*) hMy_string;
  if (pMy_string->size >= pMy_string->capacity)
 	{
-	  char* temp = (char*)malloc(sizeof(char) *pMy_string->capacity * 2); //error here
+	  char* temp = (char*)malloc(sizeof(char) *pMy_string->capacity * 2);
 	  if (temp == NULL)
 		{
 		  printf("Data could not be allocated\n");
