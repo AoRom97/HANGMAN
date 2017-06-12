@@ -7,9 +7,9 @@
 
 struct my_string
 {
-  int size;
-  int capacity;
   char* data;
+  int capacity;
+  int size;
 
 };
 typedef struct my_string My_string;
@@ -23,12 +23,12 @@ MY_STRING my_string_init_default(void)
       pMy_string->size = 0;
       pMy_string->capacity = 7;
       pMy_string->data = (char*)malloc(sizeof(char) *pMy_string->capacity);
-    	if (pMy_string->data  == NULL)
-	{
-		printf("Data could not be allocated");		
-		free(pMy_string);
-		pMy_string = NULL;
-    	}
+      if (pMy_string->data  == NULL)
+  {
+    printf("Data could not be allocated");    
+    free(pMy_string);
+    pMy_string = NULL;
+      }
     }
   return pMy_string;
 }
@@ -50,11 +50,11 @@ MY_STRING my_string_init_c_string(const char* c_string)
       x = strlen(c_string);
       pMy_string->size = x;
       pMy_string->capacity = x + 1;
-	pMy_string->data = (char*)malloc(sizeof(char)* pMy_string->capacity);
+  pMy_string->data = (char*)malloc(sizeof(char)* pMy_string->capacity);
       if( pMy_string->data == NULL);
       {
-	free(pMy_string);
-	pMy_string = NULL;
+  free(pMy_string);
+  pMy_string = NULL;
       }
     }
   return (MY_STRING) pMy_string;
