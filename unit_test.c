@@ -5,9 +5,7 @@ int main(int argc, char* argv[])
 {
    Status (*tests[])(char*, int) =
        { 
-            test_init_default_returns_nonNULL,
-            test_get_size_on_init_default_returns_0,
-	    
+            
 	    test_init_default_returns_nonNULL,
 	    test_get_size_on_init_default_returns_0,
 	    test_get_capacity_on_init_default_returns_7,
